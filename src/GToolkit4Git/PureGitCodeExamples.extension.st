@@ -1,6 +1,20 @@
 Extension { #name : #PureGitCodeExamples }
 
 { #category : #'*GToolkit4Git' }
+PureGitCodeExamples >> exampleGt4Git [
+	<gtExample>
+	<noTest>
+
+	| repository |
+
+	repository := PureGitCodeRepository on: (IceRepository repositoryNamed: 'gt4git') location.
+
+	self assert: repository exists.
+
+	^ repository
+]
+
+{ #category : #'*GToolkit4Git' }
 PureGitCodeExamples >> exampleGToolkit4GitPackage [
 	<gtExample>
 	<noTest>
@@ -30,20 +44,6 @@ PureGitCodeExamples >> exampleGToolkit4GitPackageSnapshot [
 	self assert: snapshot notNil.
 	
 	^ snapshot
-]
-
-{ #category : #'*GToolkit4Git' }
-PureGitCodeExamples >> exampleGt4Git [
-	<gtExample>
-	<noTest>
-
-	| repository |
-
-	repository := PureGitCodeRepository on: (IceRepository repositoryNamed: 'gt4git') location.
-
-	self assert: repository exists.
-
-	^ repository
 ]
 
 { #category : #'*GToolkit4Git' }

@@ -331,24 +331,6 @@ PureGitExamples >> exampleFixDetachedHead [
 ]
 
 { #category : #'*GToolkit4Git' }
-PureGitExamples >> exampleGToolkit [
-	<gtExample>
-	<noTest>
-
-	| systemRepository repository |
-
-	systemRepository := IceRepository repositoryNamed: 'gtoolkit'.
-
-	self assert: systemRepository notNil.
-
-	repository := PureGitRepository on: systemRepository location.
-
-	self assert: repository exists.
-
-	^ repository
-]
-
-{ #category : #'*GToolkit4Git' }
 PureGitExamples >> exampleGt4Git [
 	<gtExample>
 	<noTest>
@@ -411,6 +393,24 @@ PureGitExamples >> exampleGt4GitRootCommit [
 	self assert: (rootCommit comment includesSubstring: 'created a new repo').
 
 	^ rootCommit
+]
+
+{ #category : #'*GToolkit4Git' }
+PureGitExamples >> exampleGToolkit [
+	<gtExample>
+	<noTest>
+
+	| systemRepository repository |
+
+	systemRepository := IceRepository repositoryNamed: 'gtoolkit'.
+
+	self assert: systemRepository notNil.
+
+	repository := PureGitRepository on: systemRepository location.
+
+	self assert: repository exists.
+
+	^ repository
 ]
 
 { #category : #'*GToolkit4Git' }

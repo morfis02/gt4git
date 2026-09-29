@@ -130,3 +130,7 @@ GtGitRepositoryRegistryHistory >> restoreAll [
 	^ self records collect: [ :each | 
 		[ each restore ] on: Error do: [ :exception | exception ] ]
 ]
+
+{ #category : #'as yet unclassified' }
+GtGitRepositoryRegistryHistory >> tests [
+]
